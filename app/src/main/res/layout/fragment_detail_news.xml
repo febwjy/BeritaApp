@@ -1,0 +1,101 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/rel_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:id="@+id/img_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_height"
+                    android:scaleType="centerCrop"
+                    android:textColor="@android:color/white"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/txt_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_news"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textColor="@color/black_text"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/txt_news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_author"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/black_text"
+                    android:textSize="@dimen/text_size_big"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_news_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_news_title"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:textColor="@color/black_text"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <Button
+                    android:id="@+id/txt_news_readmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_news_content"
+                    android:text="@string/readmore"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/txt_news_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_news_readmore"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:textColor="@color/black_text"
+                    android:textSize="@dimen/text_size_small2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

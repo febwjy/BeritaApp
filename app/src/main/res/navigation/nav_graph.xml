@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/NewsListFragment">
+
+    <fragment
+        android:id="@+id/NewsListFragment"
+        android:name="id.febwjy.beritaapp.ui.topheadlines.TopHeadlinesFragment"
+        android:label="BeritaApp" >
+        <action
+            android:id="@+id/action_goto_newsdetail"
+            app:destination="@id/NewsDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/NewsDetailFragment"
+        android:name="id.febwjy.beritaapp.ui.detailnews.NewsDetailFragment"
+        android:label="BeritaApp" >
+        <action
+            android:id="@+id/action_goto_newsource"
+            app:destination="@id/WebView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WebView"
+        android:name="id.febwjy.beritaapp.ui.detailnews.WebViewer"
+        android:label="BeritaApp" >
+    </fragment>
+
+</navigation>
